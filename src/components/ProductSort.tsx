@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default function ProductSort({ className = "", onSelect }: Props) {
-  const [allProducts, setAllProducts] = useState<Products[]>([]);
+  const [, setAllProducts] = useState<Products[]>([]);
   const [, setProducts] = useState<Products[]>([]);
 
   useEffect(() => {
@@ -17,10 +17,10 @@ export default function ProductSort({ className = "", onSelect }: Props) {
     setProducts(products);
   }, []);
 
-  const sortProducts = (category: Products["category"] | "all") => {
-    if (category === "all") return setProducts(allProducts);
-    setProducts(allProducts.filter((p) => p.category === category));
-  };
+  // const sortProducts = (category: Products["category"] | "all") => {
+  //   if (category === "all") return setProducts(allProducts);
+  //   setProducts(allProducts.filter((p) => p.category === category));
+  // };
 
   return (
     <div className={className}>

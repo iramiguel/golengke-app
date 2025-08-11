@@ -24,12 +24,12 @@
 import { useEffect, useState } from "react";
 import type { Products } from "../../types";
 import { products } from "../../data/productsDB";
-import { filterProducts } from "../../utils/filterProducts";
+// import { filterProducts } from "../../utils/filterProducts";
 import ProductsHero from "./ProductsHero";
 import ProductList from "../../components/ProductList";
 
 export default function ProductsPage() {
-  const [allProducts, setAllProducts] = useState<Products[]>([]);
+  const [, setAllProducts] = useState<Products[]>([]);
   const [items, setItems] = useState<Products[]>([]);
 
   useEffect(() => {
