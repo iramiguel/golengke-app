@@ -1,3 +1,5 @@
+import "./ProductCard.css";
+
 type ProductProps = {
   name: string;
   price: number;

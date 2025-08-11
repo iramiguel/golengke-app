@@ -1,22 +1,26 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { User, ShoppingCart, List } from "lucide-react";
 import "./Header.css";
 import { ArrowRight, SquareX } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface HeaderProps {
   onSearch: (query: string) => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ onSearch }) => {
-  const [query, setQuery] = useState("");
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [query] = useState("");
+  const [, setIsScrolled] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-  const handleSearch = (searchText: string) => {
-    setQuery(searchText);
-    onSearch(searchText);
-    console.log("Searching for:", searchText);
-  };
+  const navigate = useNavigate();
+
+  // const handleSearch = (searchText: string) => {
+  //   setQuery(searchText);
+  //   onSearch(searchText);
+  //   console.log("Searching for:", searchText);
+  // };
 
   const toggleMobileMenu = () => {
     setShowMobileMenu((prev) => !prev);
@@ -35,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
     <div className="header">
       <div className="header-container">
         <div className="header-logo">
-          <p>GoLengke</p>
+          <a href="" className="logo" onClick={() => navigate("/")}>GoLengke</a>
         </div>
         <div className="header-links">
           <a href="#products">All products</a>
@@ -89,7 +93,10 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
                   <li>
                     <a href="#others">Others</a>
                   </li>
-                  <button className="view-all-btn">
+                  <button
+                    className="view-all-btn"
+                    onClick={() => navigate("/products")}
+                  >
                     View All <ArrowRight />
                   </button>
                 </ul>

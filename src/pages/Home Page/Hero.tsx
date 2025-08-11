@@ -1,8 +1,9 @@
-import React from "react";
-import "./Hero.css";
-import heroImage from "../assets/images/hero-image.png";
 
-interface HeroProps {}
+// import React from "react";
+import "./Hero.css";
+import heroImage from "../../assets/images/hero-image.png";
+
+// interface HeroProps {}
 
 const Hero = () => {
   return (

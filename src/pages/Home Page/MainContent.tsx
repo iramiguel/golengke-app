@@ -1,11 +1,11 @@
-import React from "react";
-import { Carousel } from './Carousel';
+// import React from "react";
+import { Carousel } from '../../components/Carousel';
 import "./MainContent.css";
-import mainImage from "../assets/images/main-image.png";
-import Meat from "../assets/images/meat.png";
-import Seafood from "../assets/images/seafood.png";
-import FruVeg from "../assets/images/fruits.png";
-import Others from "../assets/images/condiments.png";
+import mainImage from "../../assets/images/main-image.png";
+import Meat from "../../assets/images/meat.png";
+import Seafood from "../../assets/images/seafood.png";
+import FruVeg from "../../assets/images/fruits.png";
+import Others from "../../assets/images/condiments.png";
 
 const IMAGES = [Meat, Seafood, FruVeg, Others];
 

@@ -74,7 +74,7 @@
     box-sizing: border-box;
     padding: 2em;
     border-radius: 1.5em;
-    color: black;
+    color: rgb(24, 20, 20);
 }
 
 .footer-form h2 {
@@ -93,7 +93,7 @@
     border-radius: 8px;
     box-sizing: border-box;
     background-color: #f2f2f2;
-    color: black;
+    color: rgb(24, 20, 20);
 }
 
 input:focus {

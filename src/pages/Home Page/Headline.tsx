@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 import "./Headline.css";
 
-const Reviews = () => {
+const Headline = () => {
   return (
     <div className="sign-in-wrapper">
       <span className="sign-in-message">
@@ -17,4 +17,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default Headline;

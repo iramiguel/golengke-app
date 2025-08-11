@@ -1,87 +1,94 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    width: 100vw;
-    height: 5.4em;
-    background-color: #EBE062;
-    overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100vw;
+  height: 5.4em;
+  background-color: #EBE062;
+  overflow: hidden;
 }
 
 
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    max-width: 1200px;
-    padding-left: 0.3em;
-    padding-right: 0.7em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  max-width: 1200px;
+  padding-left: 0.3em;
+  padding-right: 0.7em;
 }
 
 .header-logo {
-    background: white;
-    border-radius: 300% / 300%;
-    height: 3.3em;
-    transform: rotate(-10deg);
-    padding: 0.4em 1.5em;
-    display: flex;
-    align-items: center;
+  background: white;
+  border-radius: 300% / 300%;
+  height: 3.3em;
+  transform: rotate(-10deg);
+  padding: 0.4em 1.5em;
+  display: flex;
+  align-items: center;
 }
 
-.header p {
-    display: flex;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #17AC90;
-    font-family: "Bagel Fat One", system-ui;
-    transform: rotate(10deg);
+.logo {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #17AC90;
+  font-family: "Bagel Fat One", system-ui;
+  transform: rotate(10deg);
+  transition: color .2s ease-in-out;
 }
+
+.logo:hover {
+  color: #1E9E9A;
+  text-decoration: none;
+}
+
 
 .header-links {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
 }
 
 .header-links a {
-    font-size: 1.2em;
-    text-decoration: none;
-    color: white;
-    flex-direction: row;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: white;
+  flex-direction: row;
 }
 
 .header-links a:hover {
-    color: #1E9E9A;
-    text-decoration: underline;
-    transition: .6s ease;
+  color: #1E9E9A;
+  text-decoration: underline;
+  transition: .6s ease;
 }
 
 .header-buttons {
-    display: flex;
-    gap: 1em;
-    align-items: center;
+  display: flex;
+  gap: 1em;
+  align-items: center;
 }
 
 .list-toggle {
-    display: none;
+  display: none;
 }
 
 
 @media (max-width: 768px) {
-    .list-toggle {
-        display: inline-block;
-    }
+  .list-toggle {
+    display: inline-block;
+  }
 
-    .header-links {
-        display: none;
-    }
+  .header-links {
+    display: none;
+  }
 }
 
 .mobile-nav-overlay {
@@ -106,7 +113,7 @@
   box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   scrollbar-width: none;
-  transform: translateX(100%); 
+  transform: translateX(100%);
   animation: slideIn 0.4s ease forwards;
   box-sizing: border-box;
 }
@@ -116,6 +123,7 @@
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0%);
   }
@@ -148,15 +156,15 @@
 }
 
 .mobile-search {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    background-color: #f2f2f2;
-    color: black;
-    margin-bottom: 1.5em;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  color: black;
+  margin-bottom: 1.5em;
 }
 
 .close-btn {
@@ -168,11 +176,11 @@
   font-size: 2rem;
   color: #000000;
   cursor: pointer;
-  
+
 }
 
 .close-btn svg {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .top-nav {

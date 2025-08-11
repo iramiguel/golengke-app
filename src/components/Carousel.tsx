@@ -7,10 +7,11 @@ import {
   Circle,
 } from "lucide-react";
 import "./Carousel.css";
-import Meat from "../assets/images/meat.png";
-import Seafood from "../assets/images/seafood.png";
-import FruVeg from "../assets/images/fruits.png";
-import Others from "../assets/images/condiments.png";
+import { useNavigate } from "react-router-dom";
+// import Meat from "../assets/images/meat.png";
+// import Seafood from "../assets/images/seafood.png";
+// import FruVeg from "../assets/images/fruits.png";
+// import Others from "../assets/images/condiments.png";
 
 type CarouselProps = {
   imageUrls: string[];
@@ -18,6 +19,7 @@ type CarouselProps = {
 
 export function Carousel({ imageUrls }: CarouselProps) {
   const [imageIndex, setImageIndex] = useState(0);
+  const navigate = useNavigate();
 
   function showNextImage() {
     setImageIndex((index) => {
@@ -99,7 +101,7 @@ export function Carousel({ imageUrls }: CarouselProps) {
         </button>
       </div>
       <div className="all-btn-wrapper">
-        <button>
+        <button onClick={() => navigate("/products")}>
           View All <ArrowRight />
         </button>
       </div>
